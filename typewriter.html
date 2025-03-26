@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typewriter</title>
+    <link rel="stylesheet" href="typewriter.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Typewriter</h1>
+
+        <!-- Timer display -->
+        <div id="timerDisplay">Time Elapsed: 0.00 seconds</div>
+
+        <div>
+           <h2 id="rules"> Rules</h2>
+           <ol>
+           <li> Enter at least 7 words !</li>
+           <li> Ensure the first and last word of the paragraph are not common words.</li>
+           <li> Add "the", "and", "is", "to", "in" within the paragraph.</li> 
+           <li> A text box for input and a submit button to process the text</li>
+           </ol>
+        </div>
+
+        <form id="paragraphForm">
+            <label for="inputParagraph">Start writing your paragraph:</label>
+            <textarea id="inputParagraph" rows="6" placeholder="Type your paragraph here..." onfocus="startTimer()"></textarea>
+            <button type="button" id="submitBtn">Submit</button>
+        </form>
+
+        <div id="output">
+            <h2>Generated Paragraph</h2>
+            <p id="generatedParagraph"></p>
+            <p id="timeTaken"></p>
+        </div>
+    </div>
+
+    <script src="typewriter.js"></script>
+</body>
+</html>
